@@ -1,0 +1,16 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Amber
+scopeName: source.amber
+fileTypes: ["amber"]
+uuid: fb354c9a-b5fc-4c19-a58a-c70a01248227
+
+patterns:
+- name: comment.other.doctype.amber
+  match: ^(!!!|doctype)(\\s*[a-zA-Z0-9-_]+)?
+  comment: Doctype declaration
+- name: comment.unbuffered.block.jade
+  begin: ^(\\s*)//-
+  end: ^(?!(\\1\\s)|\\s*$)
+  comment: Unbuffered (jade-only) comments.
+...
